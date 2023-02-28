@@ -70,12 +70,12 @@
 
     <div class="col-md-9">
         <article class="blog-post">
-            <h2 class="blog-post-title">Layanan baru oleh pemerintah</h2>
-            <p class="blog-post-meta">1 Januari 2021 oleh <strong>Pemerintah Kecamatan Cengkareng</strong></p>
+            <h2 class="blog-post-title">Layanan baru oleh YAYASAN PENDIDIDKAN TELKOM</h2>
+            <p class="blog-post-meta">1 Januari 2021 oleh <strong>YAYASAN PENDIDIKAN TELKOM</strong></p>
 
             <p>
-                Pemerintahan Cengkareng resmi meluncurkan sebuah website yang dirancang agar para masyarakat dapat lebih mudah untuk menyampaikan aspirasinya.
-                Dengan adanya website ini pemerintah berharap dapat membantu masyarakat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab facilis in est optio fugiat recusandae illum quasi vel reprehenderit, esse atque odio nostrum minima voluptatibus molestias nam id velit debitis praesentium eveniet eaque laboriosam. t vero qui soluta doloremque vitae animi consequuntur nulla, molestiae fugit nemo dolorum non voluptas.
+
             </p>
             <hr>
         </article>

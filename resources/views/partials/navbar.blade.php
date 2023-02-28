@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light mb-2 shadow bg-body rounded fixed-top" style="background: #cccccc">
+<nav class="navbar navbar-expand-lg navbar navbar-dark shadow bg-danger fixed-top">
     <div class="container justify-content-between">
       <a class="navbar-brand text-primary fw-bold fs-3 "href="/">
         Pengaduan Siswa

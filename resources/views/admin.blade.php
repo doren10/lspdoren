@@ -15,10 +15,21 @@
                         </li>
 
                     </ul>
-                   <div class="row my-2 mt-4 justify-content-center">
+                   <div class="row my-2 mt-5 justify-content-center
                     <div class="col-8">
                         <div class="row justify-content-center">
-                            <div class="col-3">
+                            <div class="col-2">
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sort
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="/admin?sort=desc">Hight - Low</a></li>
+                                        <li><a class="dropdown-item" href="/admin?sort=asc">Low - Hight</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-2">
                                 <div class="dropdown">
                                     <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       Kategori
@@ -28,9 +39,9 @@
                                         <li><a class="dropdown-item" href="/admin?kategori={{ $kat->id }}">{{ $kat->ket_kategori }}</a></li>
                                         @endforeach
                                     </ul>
-                                  </div>
+                                </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <div class="dropdown">
                                     <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       Status
@@ -42,7 +53,7 @@
                                     </ul>
                                   </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <form action="/admin" method="get">
                                 <div class="input-group mb-3">
                                    
@@ -50,7 +61,7 @@
                                         <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="bi bi-search"></i></button></form>
                                   </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <form action="/admin" method="get">
                                 <div class="input-group mb-3">
                                     <input type="text" required name="search"  value="{{ request('search') }}" class="form-control" placeholder="Nomor aspirasi" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -71,6 +82,7 @@
                                             <tr>
                                                 <th scope="col">No</th>
                                                 <th scope="col">Nama</th>
+                                                <th scope="col">Kelas</th>
                                                 <th scope="col">Kategori</th>
                                                 <th scope="col">Lokasi</th>
                                                 <th scope="col">Keterangan</th>
@@ -84,12 +96,14 @@
                                             <tr>
                                                 <th scope="row">{{ $as->id }}</th>
                                                 <td>{{ $as->input_aspirasi->siswa->nama }}</td>
+                                                <td>{{ $as->input_aspirasi->siswa->kelas }}</td>
                                                 <td>{{ $as->kategori->ket_kategori }}</td>
                                                 <td>{{ $as->input_aspirasi->lokasi }}</td>
                                                 <td>{{ $as->input_aspirasi->ket }}</td>
                                                 <td><img width="50%" height="50%" src="{{asset('storage/' .$as->input_aspirasi->image) }}" alt="default"></td>
                                                 <td>{{ $as->created_at}}</td>
                                                 <td>  @if ($as['status'] == 'Menunggu')
+                                                */delete
                                                 <form action="/admin/delete" method="post">
                                                         @csrf
                                                         <input type="hidden" name="id" value="{{$as->id}}">
@@ -146,9 +160,11 @@
                                             <tr>
                                                 <th scope="col">No</th>
                                                 <th scope="col">Nama</th>
+                                                <th scope="col">Kelas</th>
                                                 <th scope="col">Kategori</th>
                                                 <th scope="col">Lokasi</th>
                                                 <th scope="col">Keterangan</th>
+                                                <th scope="col">Bukti Gambar</th>
                                                 <th scope="col">Waktu</th>
                                                 <th scope="col">Ratting</th>
                                             </tr>
@@ -158,9 +174,11 @@
                                             <tr>
                                                 <th scope="row">{{ $as->id }}</th>
                                                 <td>{{ $as->input_aspirasi->siswa->nama }}</td>
+                                                <td>{{ $as->input_aspirasi->siswa->kelas }}</td>
                                                 <td>{{ $as->kategori->ket_kategori }}</td>
                                                 <td>{{ $as->input_aspirasi->lokasi }}</td>
                                                 <td>{{ $as->input_aspirasi->ket }}</td>
+                                                <td><img width="50%" height="50%" src="{{asset('storage/' .$as->input_aspirasi->image) }}" alt="default"></td>
                                                 <td>{{ $as->created_at}}</td>
                                                 <td> <div class=" text-center fw-bold">
                                                     {{ $as->feedback }}

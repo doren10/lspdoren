@@ -28,6 +28,10 @@ class Aspirasi extends Model
         {
             return $query->where('status', 'like', '%'. $status.'%');
         });
+        $query->when($fillters['sort'] ?? false, function($query, $sort)
+        {
+            return $query->orderBy('id',$sort)->get();
+        });
     }
 
     public function kategori()
